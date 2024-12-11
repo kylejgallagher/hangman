@@ -2,8 +2,6 @@ from multiprocessing.pool import worker
 word_list = ["aardvark", "baboon", "camel"]
 import random
 
-
-
 stages = [r'''
   +---+
   |   |
@@ -67,8 +65,6 @@ print (randomword)
 
 display = "_" * len(randomword)
 print(display)
-
-
 
 lives = 6
 
