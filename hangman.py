@@ -66,11 +66,15 @@ print (randomword)
 display = "_" * len(randomword)
 print(display)
 
+
+
 lives = 6
 
 while "_" in display:
     guess = input("Guess a letter ").lower()
-    if guess in randomword:
+    if guess in display:
+        print("You already guessed this letter")
+    elif guess in randomword:
         print("Right")
         new_display = ""
         for i in range(len(randomword)):
@@ -78,7 +82,6 @@ while "_" in display:
                 new_display += guess
             else:
                 new_display += display[i]
-
 
         display = new_display
         print(stages[lives])
